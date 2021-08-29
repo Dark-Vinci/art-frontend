@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { useRouteMatch } from 'react-router-dom';
 
 import Nodes from "./nodes";
 import { clicked, updateBackground } from '../store/action/node';
@@ -10,6 +11,9 @@ function DrawingBoard ({
     clicked, backgroundIsChanged,
     updateBackground
 }) {
+    const { url } = useRouteMatch();
+
+    // console.log(url);
     return (
         <div className="drawingBoard">
             <Nodes 
@@ -18,7 +22,11 @@ function DrawingBoard ({
                 shouldPaint={ shouldPaint }
                 canvasColor={ canvasColor }
                 currentShape={ currentShape }
-                border={ border }
+                // border={ border || null }
+                border={ 
+                    url === '/mine' ?
+                    border: null
+                }
                 clicked={ clicked }
                 backgroundChange= { backgroundIsChanged }
             />

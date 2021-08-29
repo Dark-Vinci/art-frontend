@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #d305d3;
+  color: white;
+}
+
+.container h3 {
+  height: auto;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.container i {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=nav.module.css.map */

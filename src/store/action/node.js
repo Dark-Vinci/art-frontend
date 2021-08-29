@@ -7,12 +7,19 @@ export const generate = () => {
     }
 }
 
+export const clearCanvas = (backgroundColor) => {
+    return {
+        type: actionType.CLEAR_CANVAS,
+        backgroundColor: backgroundColor
+    }
+}
+
 export const updateBackground = (color, oldBackground) => {
     return {
         type: actionType.UPDATE_COLOR,
         payload: { color, oldBackground }
     }
-}
+}  
 
 export const paint = (name, currentColor) => {
     return {
@@ -35,5 +42,12 @@ export const clicked = (name, shouldPaint, currentColor, canvasColor) => {
         } else {
             dispatch(erase(name, canvasColor));
         }
+    }
+}
+
+export const importNode = (data) => {
+    return {
+        type: actionType.IMPORT_NODE,
+        data: data
     }
 }

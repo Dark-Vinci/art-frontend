@@ -1,0 +1,106 @@
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    // border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(250, 203, 250);
+
+    input {
+        background-color: transparent;
+    }
+
+    h3 {
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+    .container {
+        height: 70vh;
+        width: 45vw;
+        min-width: 280px;
+        border: 2px solid rgb(253, 238, 238);
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: -2px -2px 7px rgb(238, 220, 220);
+        padding: 8px;
+        background-color: rgba(250, 203, 250, 0.2);
+
+        & > login, & > form {
+            margin: 20px 0px;
+        }
+
+        form {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 12px 0px;
+
+                label {
+                    color: purple;
+                    font-weight: bold;
+                    outline: none;
+                    margin: 5px;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    width: 240px;
+                }
+            }
+
+            button {
+                width: 120px;
+                height: 40px;
+                background-color: purple;
+                color: white;
+                font-size: 18px;
+                border-radius: 20px;
+                border: none;
+                transition: all 1s;
+
+                &:hover, &:focus {
+                    border: 2px solid purple;
+                    background-color: rgb(242, 147, 242);
+                    color: rgb(90, 5, 90);
+                }
+
+                &:disabled {
+                    border: 2px solid purple;
+                    background-color: rgb(242, 147, 242);
+                    color: rgb(90, 5, 90);
+                }
+            }
+        }
+
+        div {
+            font-size: 20px;
+            font-weight: 900;
+
+            button {
+                border: 2px solid purple;
+                background-color: rgb(242, 147, 242);
+                color: rgb(90, 5, 90);
+                margin-left: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

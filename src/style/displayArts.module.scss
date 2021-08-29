@@ -1,0 +1,62 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(189, 29, 189);
+    color: white;
+    box-sizing: border-box;
+
+    div.top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h3 {
+            font-size: 25px;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+
+            p, button {
+                margin: 0px 30px;
+            }
+
+            button {
+                width: 120px;
+                border: 2px solid white;
+                background-color: purple;
+                color: white;
+                height: 40px;
+                border-radius: 20px;
+                transition: all 0.5s;
+
+                &:hover {
+                    border: 2px solid purple;
+                    color: purple;
+                    background-color: rgb(245, 146, 245);
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        margin: 8px 0px 0px 0px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: red;
+    }
+}

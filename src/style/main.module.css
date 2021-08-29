@@ -1,0 +1,68 @@
+.container {
+  margin-top: 40px;
+  min-height: auto;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f892f8;
+}
+
+.container .main {
+  min-height: 70vh;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main .mainmain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  padding: 20px;
+}
+
+.container .main .mainmain button {
+  background-color: purple;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  height: 45px;
+  width: 120px;
+  font-size: 16px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.container .main .mainmain button:hover {
+  border: 2px solid white;
+  background-color: #fc5bfc;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=main.module.css.map */

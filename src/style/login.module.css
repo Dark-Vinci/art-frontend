@@ -1,0 +1,139 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-color: #facbfa;
+}
+
+.main input {
+  background-color: transparent;
+}
+
+.main h3 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.main p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main .container {
+  height: 70vh;
+  width: 45vw;
+  min-width: 280px;
+  border: 2px solid #fdeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  -webkit-box-shadow: -2px -2px 7px #eedcdc;
+          box-shadow: -2px -2px 7px #eedcdc;
+  padding: 8px;
+  background-color: rgba(250, 203, 250, 0.2);
+}
+
+.main .container > login, .main .container > form {
+  margin: 20px 0px;
+}
+
+.main .container form {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .container form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12px 0px;
+}
+
+.main .container form div label {
+  color: purple;
+  font-weight: bold;
+  outline: none;
+  margin: 5px;
+}
+
+.main .container form div input {
+  border: none;
+  outline: none;
+  width: 240px;
+}
+
+.main .container form button {
+  width: 120px;
+  height: 40px;
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.main .container form button:hover, .main .container form button:focus {
+  border: 2px solid purple;
+  background-color: #f293f2;
+  color: #5a055a;
+}
+
+.main .container form button:disabled {
+  border: 2px solid purple;
+  background-color: #f293f2;
+  color: #5a055a;
+}
+
+.main .container div {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.main .container div button {
+  border: 2px solid purple;
+  background-color: #f293f2;
+  color: #5a055a;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=login.module.css.map */

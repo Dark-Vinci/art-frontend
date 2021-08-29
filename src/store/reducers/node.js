@@ -13,7 +13,7 @@ const nodeReducer = (state = initialState, action) => {
             // generate the nodes array with the utils function
             const color = action.payload.color
             return {
-                nodes: [ ...generate(50, 30, color) ]
+                nodes: [ ...generate(40, 50, color) ]
             }
         
         case actionType.PAINT:
@@ -99,6 +99,28 @@ const nodeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 nodes: clonedNode
+            }
+
+        case actionType.CLEAR_CANVAS:
+            const cloned = _.cloneDeep(state.nodes);
+
+            cloned.forEach((row) => {
+                row.forEach((node) => {
+                    node.color = action.backgroundColor
+                });
+            });
+
+            return {
+                ...state,
+                nodes: cloned
+            }
+
+        case actionType.IMPORT_NODE:
+            return {
+                ...state,
+                nodes: [
+                    ...action.data
+                ]
             }
         default: return state;
     }

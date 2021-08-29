@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,eAAe;EACvB,UAAU,EAAE,UAAU;EACtB,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,UAAU;CAK1B;;AAbD,AAUI,UAVM,AAUL,MAAM,CAAC;EACJ,MAAM,EAAE,gBAAgB;CAC3B",
+    "sources": [
+        "artCard.module.scss"
+    ],
+    "names": [],
+    "file": "artCard.module.css"
+}

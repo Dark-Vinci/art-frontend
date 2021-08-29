@@ -1,0 +1,89 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #bd1dbd;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container div.top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container div.top h3 {
+  font-size: 25px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.container div.top div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+}
+
+.container div.top div p, .container div.top div button {
+  margin: 0px 30px;
+}
+
+.container div.top div button {
+  width: 120px;
+  border: 2px solid white;
+  background-color: purple;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.container div.top div button:hover {
+  border: 2px solid purple;
+  color: purple;
+  background-color: #f592f5;
+}
+
+.container h3 {
+  font-size: 30px;
+  margin: 8px 0px 0px 0px;
+}
+
+.container h2 {
+  font-size: 20px;
+  color: red;
+}
+/*# sourceMappingURL=displayArts.module.css.map */

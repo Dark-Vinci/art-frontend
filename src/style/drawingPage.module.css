@@ -1,0 +1,159 @@
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container > div.buttons {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px;
+  width: 60%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container > div.buttons button {
+  background-color: purple;
+  color: white;
+  height: 40px;
+  border: none;
+  width: 100px;
+  margin: 0px 5px;
+  border-radius: 30px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin-bottom: 3px;
+}
+
+.container > div.buttons button:hover, .container > div.buttons button:target {
+  color: purple;
+  background-color: #f0a5fa;
+}
+
+.container > div.buttons button:nth-child(3) {
+  color: purple;
+  background-color: #f0a5fa;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.container > div.buttons button:nth-child(3):hover, .container > div.buttons button:nth-child(3):target {
+  background-color: purple;
+  color: white;
+}
+
+.container div.colorchange {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container div.colorchange > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container div.colorchange > div input[type=color] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 40px;
+  background: transparent;
+  margin: 0px;
+}
+
+.container div.colorchange > div input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  margin: 0px;
+}
+
+.container div.colorchange > div input[type=color]::-webkit-color-swatch {
+  border: 2px solid purple;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.container div.colorchange > div button {
+  border: 2px solid purple;
+  position: relative;
+  margin-right: 0px;
+  height: 40px;
+  color: #5c065c;
+  border-radius: 20px 0px 0px 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #fc98fc;
+  width: 80px;
+}
+
+.container div.colorchange > div button:hover, .container div.colorchange > div button:target {
+  color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #8c048c;
+}
+
+.container div.colorchange > div button.second {
+  border: 2px solid purple;
+  position: relative;
+  margin-right: 0px;
+  height: 40px;
+  color: #5c065c;
+  border-radius: 20px 0px 0px 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #fc98fc;
+  width: 80px;
+}
+
+.container div.colorchange > div button.second:hover, .container div.colorchange > div button.second:target {
+  color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #5c065c;
+}
+/*# sourceMappingURL=drawingPage.module.css.map */

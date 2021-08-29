@@ -1,0 +1,49 @@
+.container {
+    margin-top: 40px;
+    min-height: auto;
+    width: 100vw;
+    // background-color: red;
+    box-sizing: border-box;
+    background-color: rgb(248, 146, 248);
+
+    .main {
+        min-height: 70vh;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .mainmain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70%;
+            padding: 20px;
+            // border: 2px solid black;
+
+            button {
+                background-color: purple;
+                border: none;
+                color: white;
+                border-radius: 20px;
+                height: 45px;
+                width: 120px;
+                font-size: 16px;
+                transition: all 1s;
+
+                &:hover {
+                    border: 2px solid white;
+                    background-color: rgb(252, 91, 252);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        margin-top: 0px;
+    }
+}

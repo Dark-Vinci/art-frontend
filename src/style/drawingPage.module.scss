@@ -1,0 +1,120 @@
+.container {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+
+    & > div.buttons {
+        color: white;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        margin: 0px;
+        width: 60%;
+        align-items: flex-end;
+
+        button {
+            background-color: purple;
+            color: white;
+            height: 40px;
+            border: none;
+            width: 100px;
+            margin: 0px 5px;
+            border-radius: 30px;
+            transition: all 1s;
+            margin-bottom: 3px;
+
+            &:hover, &:target {
+                color: purple;
+                background-color: rgb(240, 165, 250);
+            }
+        }
+
+        button:nth-child(3) {
+            color: purple;
+            background-color: rgb(240, 165, 250);
+            transition: all 1s;
+
+            &:hover, &:target {
+                background-color: purple;
+                color: white;
+            }
+        }
+    }
+
+    div.colorchange {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input[type=color] {
+                -webkit-appearance: none;
+                border: none;
+                width: 32px;
+                height: 40px;
+                background: transparent;
+                margin: 0px;
+            }
+
+            input[type=color]::-webkit-color-swatch-wrapper {
+                padding: 0;
+                margin: 0px;
+            }
+
+            input[type=color]::-webkit-color-swatch {
+                border: 2px solid purple;
+                border-radius: 0px 20px 20px 0px;
+            }
+
+            button {
+                border: 2px solid purple;
+                position: relative;
+                margin-right: 0px;
+                height: 40px;
+                color: rgb(92, 6, 92);
+                border-radius: 20px 0px 0px 20px;
+                transition: all 1s;
+                background-color: rgb(252, 152, 252);
+                width: 80px;
+
+                &:hover, &:target {
+                    color: rgb(255, 255, 255);
+                    transition: all 1s;
+                    background-color: rgb(140, 4, 140);
+                }
+            }
+
+            button.second {
+                border: 2px solid purple;
+                position: relative;
+                margin-right: 0px;
+                height: 40px;
+                color: rgb(92, 6, 92);
+                border-radius: 20px 0px 0px 20px;
+                transition: all 1s;
+                background-color: rgb(252, 152, 252);
+                width: 80px;
+
+                &:hover, &:target {
+                    color: rgb(255, 255, 255);
+                    transition: all 1s;
+                    background-color: rgb(92, 6, 92);
+                }
+            }
+        }
+    }
+}

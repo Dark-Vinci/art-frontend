@@ -1,30 +1,32 @@
-import { memo } from 'react'
+import { memo } from 'react';
+import { useRouteMatch, withRouter } from 'react-router-dom';
 
 function Node({ name, clicked, border, currentShape, shouldPaint, currentColor, canvasColor, color }) {
     const classes = [ 'node' ];
 
-    if (currentShape === 1) {
-        // sqaure
-        classes.push('square');
-    } else if (currentShape === 2) {
-        // a little bit round
-        classes.push('25%round');
-    } else {
-        classes.push('circle');
-    }
-
+    // click handler for a single node element
     const clickHandler = (name, shouldPaint, currentColor, canvasColor) => {
         clicked(name, shouldPaint, currentColor, canvasColor);
     }
 
+    const { url } = useRouteMatch();
+
     return (
         <div
             className={ classes.join(' ') }
-            onClick={ () => clickHandler(name, shouldPaint, currentColor, canvasColor) }
+            onClick={ () => url === '/mine' ? clickHandler(name, shouldPaint, currentColor, canvasColor) : null }
             style={{
                 backgroundColor: color,
-                width: 'auto',
-                height: '10px',
+                // width: '3vmin',
+                // height: '3vmin',
+                minWidth: '11px',
+                minHeight: '11px',
+                maxWidth: '15px',
+                maxHeight: '15px',
+                // width: '3vmin',
+                // height: '3vmin',
+                width: url === '/mine' ? '3vmin': '100%',
+                height: url === '/mine' ? '3vmin': 'auto',
                 borderBottom: border ? '1px solid black' : 'none',
                 borderLeft: border ? '1px solid black': 'none',
                 borderRight: 'none',
@@ -36,4 +38,4 @@ function Node({ name, clicked, border, currentShape, shouldPaint, currentColor, 
     );
 }   
 
-export default memo(Node);
+export default memo(withRouter(Node));
