@@ -3,16 +3,20 @@ import { useHistory, withRouter } from 'react-router-dom';
 import classes from '../../style/main.module.css';
 import NavItem from './navItem';
 
-function Main ({ value }) {
+function Main ({ loged }) {
     const { push } = useHistory();
 
     const buttonClickHandler = () => {
         push('/mine');
     }
 
+    console.log('main ', loged)
+
     return (
         <main className={ classes.container }>
-            { true && <NavItem />}
+            <NavItem 
+                loged={loged}
+            />
             <div className={ classes.main }>
                 <div className={ classes.mainmain}>
                     <h1>nft digital mine</h1>

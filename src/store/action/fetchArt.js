@@ -26,9 +26,7 @@ const fetchSuccess = (name) => {
 async function fetchHelper (dispatch, token, id) {
     try {
         const response = await axios.get(`http://localhost:3030/api/art/my-art/${ id }`, {
-            headers: {
-                'x-auth-token': token
-            }
+            headers: { 'x-auth-token': token }
         });
 
         const name = response.data.data.name
@@ -36,10 +34,7 @@ async function fetchHelper (dispatch, token, id) {
         dispatch(fetchSuccess(name));
         const transformed = transformServerData(40, 50, response.data.data.pixel);
         dispatch(importNode(transformed));
-        console.log(response);
-        console.log(transformed);
     } catch (err) {
-        console.log(err);
         dispatch(fetchFail());
     }
 }

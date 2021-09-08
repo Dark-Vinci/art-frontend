@@ -40,9 +40,8 @@ function DrawingPage ({
         if (colorHelper === '') {
             return;
         }
-        // console.log(color)
+        
         setColor(colorHelper);
-        // console.log(event.target.value);
         changeColor(colorHelper);
         console.log(color)
     }
@@ -58,7 +57,6 @@ function DrawingPage ({
         changeCanvasColor(backgroundColorHelper);
         // set the state of the background color
         setCanvasColor(backgroundColorHelper);
-        // ! to be removed changeCanvasColor(event.target.value);
     }
 
     const clearCanvasButtonHandler = () => {
@@ -72,7 +70,6 @@ function DrawingPage ({
     const saveButtonHandler = () => {
         // get node, token
         // dispatch
-        // ! remove console.log('[the token]', token);
         if (!token.trim()) {
             push('/login');
         } else {
@@ -184,7 +181,7 @@ function DrawingPage ({
                         marginTop: '2px'
                     }}
                     onClick={ saveButtonHandler }
-                >save to db</button>
+                >Save</button>
             </div>
         </div>
     );

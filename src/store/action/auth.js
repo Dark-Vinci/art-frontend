@@ -1,5 +1,6 @@
-import * as actionType from './actionType';
 import axios from 'axios';
+
+import * as actionType from './actionType';
 
 // action creator for starting registration
 export const authStart = () => {
@@ -23,7 +24,6 @@ export const authSuccess = (payload) => {
     }
 }
 
-// ! not yet
 // action creator for starting loging in
 export const loginStart = () => {
     return {
@@ -31,7 +31,6 @@ export const loginStart = () => {
     }
 }
 
-// ! not yet
 // action creator for failed login
 export const loginFail = (error) => {
     return {
@@ -40,7 +39,6 @@ export const loginFail = (error) => {
     }
 }
 
-// ! not yet
 // action creator for successful login
 export const loginSuccess = (payload) => {
     return {
@@ -49,7 +47,6 @@ export const loginSuccess = (payload) => {
     }
 }
 
-// ! not yet
 // action creator for signing in automatically
 export const autoSign = (payload) => {
     return {
@@ -58,7 +55,6 @@ export const autoSign = (payload) => {
     }
 }
 
-// ! not yet
 // action creator for logging users out
 export const logout = () => {
     // remove the id, token and exipration date from local storage
@@ -72,7 +68,6 @@ export const logout = () => {
     }
 }
 
-// ! not yet
 // expiry logout timout dispatcher
 export const countDown = (time) => {
     return dispatch => {
@@ -89,7 +84,6 @@ async function register (load, dispatch, push) {
         const response = await axios.post('http://localhost:3030/api/register', load);
 
         // set token, id and expiration date
-        console.log(response);
         const token = response.headers['x-auth-token'];
         const id = response.data.data._id;
         const expiresIn = +response.data.data.expiresIn;
@@ -111,8 +105,8 @@ async function register (load, dispatch, push) {
         dispatch(authSuccess(payload));
         dispatch(countDown(expiresIn));
 
-        // redirect to /my-messages
-        push('/my-messages');
+        // redirect to /user
+        push('/user');
     } catch (ex) {
         // dispatch failure to register
         console.log(ex);
@@ -120,13 +114,12 @@ async function register (load, dispatch, push) {
     }
 }
 
-// ! not yet
 async function login (load, dispatch, push) {
     try {
         // post login request to the server
         const response = await axios.post('http://localhost:3030/api/login', load);
 
-        console.log(response)
+        // console.log(response)
         // set token, id, expiresIn
         const token = response.headers['x-auth-token'];
         const id = response.data.data._id;
@@ -146,7 +139,6 @@ async function login (load, dispatch, push) {
         localStorage.setItem('username', username);
 
         // dispatch login and countdown for logging out when token expires;
-        console.log(expiresIn);
         dispatch(loginSuccess(payload));
         dispatch(countDown(expiresIn));
 
@@ -165,7 +157,6 @@ export const onLogin = (payload, push) => {
     }
 }
 
-// ! not yet
 // dispatch register start and reaches out to the web with the register helper
 export const auth = ( payload, push ) => {
     return dispatch => {
@@ -174,7 +165,6 @@ export const auth = ( payload, push ) => {
     }
 }
 
-// ! not yet
 // dispatch for auto logging in of the user when the site is visited
 export const autoLogin = () => {
     return dispatch => {

@@ -2,7 +2,48 @@ import { Link, withRouter } from 'react-router-dom';
 
 import classes from '../../style/navItem.module.css';
 
-function NavItem () {
+function NavItem ({ loged }) {
+    let toRenderUser ;
+    let toRenderLogout;
+
+    if (loged) {
+        toRenderUser = (
+            <li>
+                <Link
+                    to='/user'
+                    exact='true'
+                >user</Link>
+            </li>
+        );
+
+        toRenderLogout = ( 
+            <li>
+                <Link
+                    to='/logout'
+                    exact='true'
+                >logout</Link>
+            </li>
+        );
+    } else {
+        toRenderUser = (
+            <li>
+                <Link
+                    to='/login'
+                    exact='true'
+                >login</Link>
+            </li>
+        );
+
+        toRenderLogout = ( 
+            <li>
+                <Link
+                    to='/register'
+                    exact='true'
+                >register</Link>
+            </li>
+        );
+    }
+
     return (
         <ul className={ classes.container }>
             <li>
@@ -11,26 +52,9 @@ function NavItem () {
                     exact='true'
                 >mine</Link>
             </li>
-            <li>
-                <Link
-                    to='/login'
-                    exact='true'
-                >login</Link>
-            </li>
-            {/* ! shlould be guarded */}
-            <li>
-                <Link
-                    to='/user'
-                    exact='true'
-                >user</Link>
-            </li>
 
-            <li>
-                <Link
-                    to='/register'
-                    exact='true'
-                >register</Link>
-            </li>
+            { toRenderUser }
+            { toRenderLogout }
         </ul>
     )
 }

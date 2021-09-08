@@ -1,26 +1,30 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import ArtCards from '../components/ArtCards';
 import { getAllArts } from '../store/action/getAllArt';
 import classes from '../style/userPage.module.css';
 
 
-function UserPage ({ fetch, data, token, loading, error, username }) {
+function UserPage ({ fetch, data, token, loading, error, username, loggedIn }) {
+    const { push } = useHistory();
+
     useEffect(() => {
         // fetch the data
         fetch(token);
     }, [fetch, token]);
 
     return (
-        token === '' ?
-            <Redirect to='/login' /> : 
-
         <div className={ classes.container }>
             <div className={ classes.main }>
                 <h3>nft mine</h3>
                 <p> welcome { username } </p>
+                <button
+                    onClick={ () => {
+                        push('/mine');
+                    }}
+                >mine</button>
                 <div>
                     <h4>here are your list of artworks</h4>
                     {
@@ -29,9 +33,11 @@ function UserPage ({ fetch, data, token, loading, error, username }) {
                             <div>loading...</div> :
                                 error ? 
                                     <h2>something went wrong</h2> :
-                                    <ArtCards 
-                                        data={ data }
-                                    />
+                                        data.length === 0 ?
+                                            'You have not made any artwork' :
+                                            <ArtCards 
+                                                data={ data }
+                                            />
                     }
                 </div>
             </div>
@@ -45,7 +51,8 @@ const mapStateToProps = ( state ) => {
         token: state.auth.token, 
         error: state.getArts.error,
         loading: state.getArts.loading,
-        username: state.auth.username
+        username: state.auth.username,
+        loggedIn: state.auth.token !== ''
     }
 }
 

@@ -13,7 +13,6 @@ function DrawingBoard ({
 }) {
     const { url } = useRouteMatch();
 
-    // console.log(url);
     return (
         <div className="drawingBoard">
             <Nodes 
@@ -22,7 +21,6 @@ function DrawingBoard ({
                 shouldPaint={ shouldPaint }
                 canvasColor={ canvasColor }
                 currentShape={ currentShape }
-                // border={ border || null }
                 border={ 
                     url === '/mine' ?
                     border: null

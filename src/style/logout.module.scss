@@ -1,0 +1,15 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    background-color: rgb(247, 168, 181);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: inherit;
+    }
+}

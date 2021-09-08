@@ -10,6 +10,7 @@ import Login from './containers/login';
 import Home from './containers/home';
 import UserPage from './containers/theUser';
 import ArtDisplay from './containers/displayArts';
+import Logout from './components/main/logout';
 import { autoLogin } from './store/action/auth';
 
 function App({ autoLogin, loggedIn }) {
@@ -20,6 +21,9 @@ function App({ autoLogin, loggedIn }) {
   console.log(loggedIn);
   return (
     <div className="App">
+      { loggedIn && <Route path='/user' exact>
+          <UserPage />
+        </Route> }
       <Switch>
         <Route path='/mine' exact>
           <DrawingPage />
@@ -37,22 +41,21 @@ function App({ autoLogin, loggedIn }) {
           <Login />
         </Route>
 
+        <Route path='/logout'>
+          <Logout />
+        </Route>
+
         <Route path='/' exact>
           <Home />
         </Route>
-
-        { loggedIn && <Route path='/user' exact>
-          <UserPage />
-        </Route> }
 
         { loggedIn && <Route 
           path='/my-art/:id' 
           component={ ArtDisplay }
           exact
         /> }
-
-        {/* <Redirect to='/mine' /> */}
       </Switch>
+      <Redirect to='/' />
     </div>
   );
 }  
