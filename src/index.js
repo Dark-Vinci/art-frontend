@@ -31,7 +31,7 @@ const store = createStore(reducers, composeEnhancer(applyMiddleware(thunk)));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={ store }>
-      <Router>
+      <Router basename='/art-frontend'>
         <App />
       </Router>
     </Provider>
