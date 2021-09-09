@@ -30,7 +30,7 @@ async function fetchHelper (dispatch, token, id) {
         // });
 
         // ! to be changed
-        const response = await axios.get(`https://proj-pix-art-wxv19.herokuapp.com/api/my-art/${ id }`, {
+        const response = await axios.get(`https://proj-pix-art-wxv19.herokuapp.com/api/art/my-art/${ id }`, {
             headers: { 'x-auth-token': token }
         });
 
