@@ -29,13 +29,13 @@ async function saveHelper (dispatch, token, data, name) {
     try {
         const toSend = { pixel: data, name: name }
 
-        await axios.post('http://localhost:3030/api/art/create', toSend, {
-            headers: { 'x-auth-token': token }
-        });
-
-        //await axios.post(`https://proj-pix-art-wxv19.herokuapp.com/api/art/create`, toSend, {
+        // await axios.post('http://localhost:3030/api/art/create', toSend, {
         //     headers: { 'x-auth-token': token }
         // });
+
+        await axios.post(`https://proj-pix-art-wxv19.herokuapp.com/api/art/create`, toSend, {
+            headers: { 'x-auth-token': token }
+        });
 
         dispatch(saveSuccess());  
     } catch (err) {
