@@ -25,7 +25,12 @@ const fetchSuccess = (name) => {
 
 async function fetchHelper (dispatch, token, id) {
     try {
-        const response = await axios.get(`http://localhost:3030/api/art/my-art/${ id }`, {
+        // const response = await axios.get(`http://localhost:3030/api/art/my-art/${ id }`, {
+        //     headers: { 'x-auth-token': token }
+        // });
+
+        // ! to be changed
+        const response = await axios.get(`https://proj-pix-art-wxv19.herokuapp.com/api/my-art/${ id }`, {
             headers: { 'x-auth-token': token }
         });
 

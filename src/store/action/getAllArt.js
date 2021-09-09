@@ -22,15 +22,19 @@ const getAllSuccess = (data) => {
 
 async function getAllHelper (dispatch, token) {
     try {
-        const response = await axios.get('http://localhost:3030/api/art/my-arts', {
+        // const response = await axios.get('http://localhost:3030/api/art/my-arts', {
+        //     headers: { 'x-auth-token': token }
+        // });
+
+        // ! to be changed
+        const response = await axios.get(`https://proj-pix-art-wxv19.herokuapp.com/api/art/my-arts`, {
             headers: { 'x-auth-token': token }
         });
+
         const data = response.data.data;
 
-        // console.log(data);
         dispatch(getAllSuccess(data));
     } catch (err) {
-        // console.log(err)
         dispatch(getAllFail());
     }
 }

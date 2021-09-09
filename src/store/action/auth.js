@@ -81,7 +81,10 @@ export const countDown = (time) => {
 async function register (load, dispatch, push) {
     try {
         // post to the server
-        const response = await axios.post('http://localhost:3030/api/register', load);
+        // const response = await axios.post('http://localhost:3030/api/register', load);
+
+        // ! to be changed
+        const response = await axios.post('https://proj-pix-art-wxv19.herokuapp.com/api/register', load);
 
         // set token, id and expiration date
         const token = response.headers['x-auth-token'];
@@ -109,7 +112,6 @@ async function register (load, dispatch, push) {
         push('/user');
     } catch (ex) {
         // dispatch failure to register
-        console.log(ex);
         dispatch(authFail());
     }
 }
@@ -117,9 +119,10 @@ async function register (load, dispatch, push) {
 async function login (load, dispatch, push) {
     try {
         // post login request to the server
-        const response = await axios.post('http://localhost:3030/api/login', load);
+        // const response = await axios.post('http://localhost:3030/api/login', load);
 
-        // console.log(response)
+        const response = await axios.post('https://proj-pix-art-wxv19.herokuapp.com/api/login', load);
+
         // set token, id, expiresIn
         const token = response.headers['x-auth-token'];
         const id = response.data.data._id;

@@ -27,8 +27,6 @@ function Register ({ login, error, loading }) {
         const validity = checkValidity(event.target.value, rules).value;
         const message =  checkValidity(event.target.value, rules).message;
 
-        console.log(validity);
-
         return {
             ...state,
             value: event.target.value,
@@ -50,7 +48,6 @@ function Register ({ login, error, loading }) {
         const validity = checkValidity(event.target.value, rules).value;
         const message =  checkValidity(event.target.value, rules).message;
 
-        console.log(validity)
         return {
             ...state,
             value: event.target.value,
@@ -86,7 +83,6 @@ function Register ({ login, error, loading }) {
             password: password.value
         }
 
-        console.log(toSend)
         // send the data to the backend withe the help if actio creatir and the store
         login(toSend, push);
     }

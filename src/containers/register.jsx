@@ -27,8 +27,6 @@ function Register ({ onAuth, error, loading }) {
         const validity = checkValidity(event.target.value, rules).value;
         const message =  checkValidity(event.target.value, rules).message;
 
-        console.log(validity);
-
         return {
             ...state,
             value: event.target.value,
@@ -50,7 +48,6 @@ function Register ({ onAuth, error, loading }) {
         const validity = checkValidity(event.target.value, rules).value;
         const message =  checkValidity(event.target.value, rules).message;
 
-        console.log(validity)
         return {
             ...state,
             value: event.target.value,
@@ -86,7 +83,6 @@ function Register ({ onAuth, error, loading }) {
             password: password.value
         }
 
-        console.log(toSend)
         // send the data to the backend withe the help if actio creatir and the store
         onAuth(toSend, push);
     }
@@ -167,8 +163,6 @@ function Register ({ onAuth, error, loading }) {
 
                 <div>Have an account?<button onClick={ loginButtonHandler }>login</button></div>
             </div>
-
-            {/* <Footer /> */}
         </div>
     );
 }

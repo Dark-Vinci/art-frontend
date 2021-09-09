@@ -33,6 +33,10 @@ async function saveHelper (dispatch, token, data, name) {
             headers: { 'x-auth-token': token }
         });
 
+        //await axios.post(`https://proj-pix-art-wxv19.herokuapp.com/api/art/create`, toSend, {
+        //     headers: { 'x-auth-token': token }
+        // });
+
         dispatch(saveSuccess());  
     } catch (err) {
         dispatch(saveFail());
